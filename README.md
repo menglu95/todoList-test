@@ -1,6 +1,7 @@
 # TODO LIST
 
 There is a TODO list written in `HTML`, `CSS` and `JavaScript` - https://jsfiddle.net/ArmanZohrabyan/Ldjs6kav/1/
+
 You need to take the code and write everything in `ReactJS` and `SCSS`.
 
 1. Need to store data in `redux`.
