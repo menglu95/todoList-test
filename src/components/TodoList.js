@@ -25,7 +25,7 @@ const TodoList = () => {
     dispatch(allActions.todoActions.updateTodo(Number(id), value));
   }
 
-  const completedItem = e => {
+  const handleCompletedChange = e => {
     const id = e.target.id;
     e.target.checked = false;
     dispatch(allActions.todoActions.completedTodo(Number(id)));
@@ -41,7 +41,7 @@ const TodoList = () => {
           todoList.filter(item => !item.complete).map((item, idx) => {
             return (
               <li key={idx} className={editableIds.includes(idx) ? "editMode" : ""}>
-                <input id={item.id} type="checkbox" onChange={completedItem}></input>
+                <input id={item.id} type="checkbox" onChange={handleCompletedChange}></input>
                 <label>{item.text}</label>
                 <input id={item.id} type="text" defaultValue={item.text} onChange={handleEditChange}></input>
                 <button id={idx} className="edit" onClick={editItem}>Edit</button>
