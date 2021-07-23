@@ -11,7 +11,8 @@ const AddItem = () => {
   const addTask = () => {
     const text = textRef.current.value.trim();
     textRef.current.value = "";
-    dispatch(allActions.todoActions.addTodo(text));
+    // dispatch(allActions.todoActions.addTodo(text));
+    dispatch(allActions.todoActions.addTodoAsync(text));
   }
 
   return (

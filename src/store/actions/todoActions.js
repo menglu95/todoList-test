@@ -9,6 +9,11 @@ const addTodo = text => {
   }
 }
 
+// addTodoAsync thunk
+const addTodoAsync = text => dispatch => {
+  setTimeout(() => dispatch(addTodo(text)), 2000); // 2s delay
+}
+
 const delTodo = id => {
   return {
     type: "DEL_TODO",
@@ -36,4 +41,5 @@ export default {
   delTodo,
   updateTodo,
   completedTodo,
+  addTodoAsync
 }
