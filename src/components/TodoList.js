@@ -21,7 +21,6 @@ const TodoList = () => {
   const handleEditChange = e => {
     const id = e.target.id;
     const value = e.target.value;
-    console.log("id", id, "value", value);
     dispatch(allActions.todoActions.updateTodo(Number(id), value));
   }
 

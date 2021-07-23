@@ -7,7 +7,6 @@ const CompleteList = () => {
   const dispatch = useDispatch();
 
   const editItem = e => {
-    console.log('editItem');
     const currentId = Number(e.target.id);
     editableIds.includes(currentId) ?
       setEditableIds(editableIds.filter(item => item !== currentId)) :
@@ -22,14 +21,11 @@ const CompleteList = () => {
   const handleEditChange = e => {
     const id = e.target.id;
     const value = e.target.value;
-    console.log("id", id, "value", value);
     dispatch(allActions.todoActions.updateTodo(Number(id), value));
   }
 
   const handleCompletedChange = e => {
     const id = e.target.id;
-    console.log('id', id, e.target.checked)
-    // e.target.checked = true;
     dispatch(allActions.todoActions.completedTodo(Number(id)));
   }
 
