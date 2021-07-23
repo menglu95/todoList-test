@@ -3,14 +3,19 @@ import './App.scss';
 import AddItem from './components/AddItem';
 import CompleteList from './components/CompleteList';
 import TodoList from './components/TodoList';
+// redux-store
+import { Provider } from 'react-redux';
+import store from './store'
 
 function App() {
   return (
-    <div className="container">
-      <AddItem />
-      <TodoList />
-      <CompleteList />
-    </div>
+    <Provider store={store}>
+      <div className="container">
+        <AddItem />
+        <TodoList />
+        <CompleteList />
+      </div>
+    </Provider>
   );
 }
 
